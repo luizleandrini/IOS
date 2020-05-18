@@ -24,7 +24,7 @@ class QuizViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viTimer.frame.size.width = view.frame.size.width
-        UIView.animate(withDuration: 60.0, delay: 0, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 10.0, delay: 0, options: .curveLinear, animations: {
             self.viTimer.frame.size.width = 0
         }) { (success) in
             self.showResults()
