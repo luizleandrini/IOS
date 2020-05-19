@@ -24,7 +24,7 @@ class PasswordGenerator {
     init(numberOfCharacters: Int, useLetters: Bool, useNumbers: Bool, useCapitalLetters: Bool, useSpecialCaracters: Bool) {
         
         var numchars = min(numberOfCharacters, 16)
-        numchars = max(numberOfCharacters, 1)
+        numchars = max(numchars, 1)
         
         self.numberOfCharacters = numchars
         self.useLetters = useLetters

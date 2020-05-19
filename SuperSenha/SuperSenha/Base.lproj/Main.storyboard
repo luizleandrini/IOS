@@ -186,11 +186,11 @@
                                     <action selector="generate:" destination="jmo-va-UMo" eventType="touchUpInside" id="eMT-OH-b9j"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTO-nl-k4J">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="9999999" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTO-nl-k4J">
                                 <rect key="frame" x="16" y="162" width="382" height="562"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.67454523600000005" green="0.56684549979999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hd-gV-9bO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="139"/>
+            <point key="canvasLocation" x="1771" y="139"/>
         </scene>
         <!--Security Tips View Controller-->
         <scene sceneID="0tL-Un-Bbw">
@@ -434,6 +434,7 @@ Por exemplo, não use "senha1 ‘, ' senha2 ‘, ' senha3 ' em contas diferentes
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XcH-7J-TMk">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.67454523600000005" green="0.56684549979999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

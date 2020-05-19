@@ -24,6 +24,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let passwordsViewController = segue.destination as! PasswordsViewController
+        if let numberOfPasswords = Int(tfTotalPasswords.text!){
+            passwordsViewController.numberOfPasswords = numberOfPasswords
+        }
+        
+        if let numberOfCharacters = Int(tfNumberOfCaracteres.text!){
+            passwordsViewController.numberOfCharacters = numberOfCharacters
+        }
+        passwordsViewController.useLetters = swLetters.isOn
+        passwordsViewController.useNumbers = swNumbers.isOn
+        passwordsViewController.useCapitalLetters = swCapitalLetters.isOn
+        passwordsViewController.useSpecialCaracters = swSpecialCaracters.isOn
+       // view.endEditing(true)
+        
+    }
 
 
 }
