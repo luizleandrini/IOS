@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="VwB-VQ-RdR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="VwB-VQ-RdR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VwB-VQ-RdR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9lt-hw-16p"/>
+                            <constraint firstAttribute="bottom" secondItem="VwB-VQ-RdR" secondAttribute="bottom" id="F9B-sj-hhk"/>
+                            <constraint firstItem="VwB-VQ-RdR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eEV-yN-DBp"/>
+                            <constraint firstAttribute="trailing" secondItem="VwB-VQ-RdR" secondAttribute="trailing" id="gzk-K5-Mjr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
