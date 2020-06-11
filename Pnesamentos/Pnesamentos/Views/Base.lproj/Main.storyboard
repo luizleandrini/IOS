@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-zT-cvV">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-zT-cvV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D79-2o-d6T">
+                            <visualEffectView opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D79-2o-d6T">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4HD-lw-aOX">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" secondItem="UY2-8H-vjM" secondAttribute="height" multiplier="750:666" id="UoH-Bj-lqv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="26U-3G-dw1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="26U-3G-dw1">
                                 <rect key="frame" x="30" y="377.5" width="354" height="48"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -71,6 +71,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pensamentos" image="quotes" id="9s6-6B-49B"/>
+                    <connections>
+                        <outlet property="ivPhoto" destination="UY2-8H-vjM" id="FGA-ia-TwV"/>
+                        <outlet property="ivPhotoBg" destination="G9J-zT-cvV" id="yky-G3-h4d"/>
+                        <outlet property="lbAuthor" destination="3JZ-5d-Znl" id="Z8Z-RH-qc2"/>
+                        <outlet property="lbQuote" destination="26U-3G-dw1" id="D2B-5R-Aqc"/>
+                        <outlet property="lcTop" destination="U3b-Q9-VY9" id="xBZ-ZB-Gkz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,9 +97,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBa-Wl-ktq">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dBa-Wl-ktq">
                                 <rect key="frame" x="182.5" y="82" width="51" height="31"/>
                                 <color key="onTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeAutoRefresh:" destination="TN4-9z-dXS" eventType="valueChanged" id="WvH-Wx-xbe"/>
+                                </connections>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gq3-wo-tnz">
                                 <rect key="frame" x="0.0" y="129" width="414" height="1"/>
@@ -104,6 +114,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="5" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="egb-mT-Adp">
                                 <rect key="frame" x="41" y="170" width="322" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTimeInterval:" destination="TN4-9z-dXS" eventType="valueChanged" id="qAx-mr-Fg9"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-yS-B9X">
                                 <rect key="frame" x="24" y="176" width="9" height="18"/>
@@ -149,6 +162,9 @@
                                     <segment title="Escuro"/>
                                 </segments>
                                 <color key="tintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorSkin:" destination="TN4-9z-dXS" eventType="valueChanged" id="N6m-pM-FW4"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,6 +199,12 @@
                         <viewLayoutGuide key="safeArea" id="nv1-Z7-YSl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="nfV-8g-MP2"/>
+                    <connections>
+                        <outlet property="lbTimeInterval" destination="Z3l-6F-V5a" id="LW3-E5-Ndb"/>
+                        <outlet property="scColorSkin" destination="UKU-et-XCS" id="Ta0-fr-biN"/>
+                        <outlet property="slTimeInterval" destination="egb-mT-Adp" id="g6A-K3-3gt"/>
+                        <outlet property="swAutoRefresh" destination="dBa-Wl-ktq" id="5RI-6w-ioW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ7-Df-6Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

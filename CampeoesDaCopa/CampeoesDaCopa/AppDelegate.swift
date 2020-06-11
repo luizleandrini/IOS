@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Pnesamentos
+//  CampeoesDaCopa
 //
-//  Created by Luiz Guilherme on 01/06/20.
+//  Created by Luiz Guilherme on 10/06/20.
 //  Copyright © 2020 Luiz Guilherme. All rights reserved.
 //
 
@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Refresh"), object: nil)
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
