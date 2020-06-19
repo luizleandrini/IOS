@@ -9,6 +9,11 @@
 import UIKit
 import MapKit
 
+protocol PlaceFinderDelegate: class {
+    func addPlace(_ place: Place)
+    
+}
+
 class PlaceFinderViewController: UIViewController {
     
     enum PlaceFinderMessageType{
@@ -22,7 +27,7 @@ class PlaceFinderViewController: UIViewController {
     @IBOutlet weak var viLoading: UIView!
     
     var place: Place!
-    
+    weak var delegate: PlaceFinderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +44,7 @@ class PlaceFinderViewController: UIViewController {
             let point = gesture.location(in: mapView)
             let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
             let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-            CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 self.load(show: false)
                 if error == nil{
                     if !self.savePlace(with: placemarks?.first){
@@ -48,7 +53,7 @@ class PlaceFinderViewController: UIViewController {
                 }else{
                     self.showMessage(type: .error("Unknown error"))
                 }
-            }
+            })
         }
     }
     
@@ -102,9 +107,10 @@ class PlaceFinderViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         if hasConfirmation{
-            let confirmAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                print("ok")
-            }
+            let confirmAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.delegate?.addPlace(self.place)
+                self.dismiss(animated: true, completion: nil)
+            })
             alert.addAction(confirmAction)
         }
         present(alert, animated: true, completion: nil)
