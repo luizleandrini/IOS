@@ -90,8 +90,11 @@
                                         </constraints>
                                         <color key="barTintColor" name="main"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="zJL-MS-szz" id="P4R-uh-TZe"/>
+                                        </connections>
                                     </searchBar>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sBr-Ug-MI7">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="sBr-Ug-MI7">
                                         <rect key="frame" x="0.0" y="50" width="394" height="486"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-7w-LFL">
@@ -135,15 +138,21 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-OY-K6v">
+                                <rect key="frame" x="188.5" y="424.5" width="37" height="37"/>
+                                <color key="color" name="main"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="kgh-9b-5fJ" secondAttribute="bottom" id="4Xw-gm-sfj"/>
                             <constraint firstItem="vQu-Hn-MXg" firstAttribute="trailing" secondItem="lil-6J-lk0" secondAttribute="trailing" constant="-10" id="5ui-yI-YYE"/>
+                            <constraint firstItem="u4f-OY-K6v" firstAttribute="centerY" secondItem="sBr-Ug-MI7" secondAttribute="centerY" id="Bny-Vr-FfG"/>
                             <constraint firstItem="lil-6J-lk0" firstAttribute="bottom" secondItem="vQu-Hn-MXg" secondAttribute="bottom" constant="10" id="Iqy-eh-pcO"/>
                             <constraint firstItem="kgh-9b-5fJ" firstAttribute="top" secondItem="BoR-qJ-ich" secondAttribute="topMargin" id="Uzu-Ng-YaQ"/>
                             <constraint firstItem="kgh-9b-5fJ" firstAttribute="leading" secondItem="lil-6J-lk0" secondAttribute="leading" id="aMF-Q2-AUl"/>
                             <constraint firstItem="lil-6J-lk0" firstAttribute="trailing" secondItem="kgh-9b-5fJ" secondAttribute="trailing" id="k1B-gj-mel"/>
+                            <constraint firstItem="u4f-OY-K6v" firstAttribute="centerX" secondItem="sBr-Ug-MI7" secondAttribute="centerX" id="lQW-vf-xUU"/>
                             <constraint firstItem="vQu-Hn-MXg" firstAttribute="top" secondItem="lil-6J-lk0" secondAttribute="top" constant="10" id="lfB-iI-fDN"/>
                             <constraint firstItem="vQu-Hn-MXg" firstAttribute="leading" secondItem="lil-6J-lk0" secondAttribute="leading" constant="10" id="x0M-MJ-W7V"/>
                         </constraints>
@@ -160,9 +169,9 @@
                     <connections>
                         <outlet property="lbAddress" destination="5LI-nE-mgO" id="c6d-gb-cjO"/>
                         <outlet property="lbName" destination="0gR-hu-T5r" id="3pd-2n-Qmy"/>
+                        <outlet property="loading" destination="u4f-OY-K6v" id="uSD-Jb-DoI"/>
                         <outlet property="mapView" destination="sBr-Ug-MI7" id="obL-Eb-HNn"/>
                         <outlet property="searchBar" destination="Hmt-ml-bUD" id="Bgt-cP-vP3"/>
-                        <outlet property="showRoute" destination="aDj-Uj-AnE" id="d9S-ir-WAn"/>
                         <outlet property="viInfo" destination="qM6-7w-LFL" id="31R-8a-bbH"/>
                     </connections>
                 </viewController>
