@@ -51,14 +51,14 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-Sp-YQz">
-                                        <rect key="frame" x="62" y="583.5" width="290" height="29"/>
+                                        <rect key="frame" x="199" y="587" width="16" height="22"/>
                                         <state key="normal" image="playAgain"/>
                                         <connections>
                                             <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUk-HV-ef1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você jogou durante x segundos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-EB-0fk">
-                                        <rect key="frame" x="81.5" y="532.5" width="251" height="21"/>
+                                        <rect key="frame" x="81.5" y="536" width="251" height="21"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.91764705879999997" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
